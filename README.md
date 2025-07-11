@@ -1,76 +1,35 @@
-# Ecommerce-backend
+# 🛒 Ecommerce Backend
 
-ecommerce-backend/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/example/ecommerce/
-│   │   │       ├── EcommerceApplication.java     # Main class
-│   │   │
-│   │   │       ├── config/
-│   │   │       │   ├── SecurityConfig.java
-│   │   │       │   ├── RedisConfig.java
-│   │   │       │   └── SwaggerConfig.java
-│   │   │
-│   │   │       ├── controller/
-│   │   │       │   ├── AuthController.java
-│   │   │       │   ├── ProductController.java
-│   │   │       │   ├── CartController.java
-│   │   │       │   └── OrderController.java
-│   │   │
-│   │   │       ├── dto/
-│   │   │       │   ├── AuthRequest.java
-│   │   │       │   ├── AuthResponse.java
-│   │   │       │   ├── ProductDTO.java
-│   │   │       │   └── OrderDTO.java
-│   │   │
-│   │   │       ├── entity/
-│   │   │       │   ├── User.java
-│   │   │       │   ├── Product.java
-│   │   │       │   ├── CartItem.java
-│   │   │       │   └── Order.java
-│   │   │
-│   │   │       ├── exception/
-│   │   │       │   ├── GlobalExceptionHandler.java
-│   │   │       │   ├── ResourceNotFoundException.java
-│   │   │       │   └── UnauthorizedException.java
-│   │   │
-│   │   │       ├── middleware/
-│   │   │       │   └── JwtFilter.java
-│   │   │
-│   │   │       ├── repository/
-│   │   │       │   ├── UserRepository.java
-│   │   │       │   ├── ProductRepository.java
-│   │   │       │   └── OrderRepository.java
-│   │   │
-│   │   │       ├── security/
-│   │   │       │   ├── JwtUtil.java
-│   │   │       │   ├── CustomUserDetailsService.java
-│   │   │       │   └── JwtAuthenticationEntryPoint.java
-│   │   │
-│   │   │       ├── service/
-│   │   │       │   ├── AuthService.java
-│   │   │       │   ├── ProductService.java
-│   │   │       │   ├── CartService.java
-│   │   │       │   └── OrderService.java
-│   │   │
-│   │   │       └── util/
-│   │   │           └── ResponseUtil.java
-│   │   |
-│   │   └── resources/
-│   │       ├── application.yml
-│   │       ├── logback-spring.xml
-│   │       └── static/
-│   │           └── (optional)
-│
-├── test/
-│   └── java/com/example/ecommerce/
-│       ├── AuthServiceTest.java
-│       ├── ProductServiceTest.java
-│       └── OrderServiceTest.java
-│
-├── Dockerfile
-├── docker-compose.yml
-├── .gitignore
-├── README.md
-├── pom.xml
+This is a Java Spring Boot backend application for an e-commerce platform. It provides secure APIs for authentication, product browsing, cart management, and order processing.
+
+---
+
+## 🔧 Tech Stack
+
+- **Java 17**
+- **Spring Boot**
+- **Spring Security + JWT**
+- **Role-Based Access Control**
+- **PostgreSQL / MySQL**
+- **Redis Cache**
+- **Docker & Docker Compose**
+
+---
+
+## 🚀 Getting Started
+### Prerequisites
+- Java 17+
+- Maven
+- Docker & Docker Compose (optional but recommended)
+
+### Running the App (Locally)
+```bash
+# Build the project
+mvn clean install
+
+# Run the app
+mvn spring-boot:run
+
+# with docker
+docker-compose up --build
+
